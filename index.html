@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vértice — loja virtual moderna">
+  <title>VÉRTICE | Loja Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">✨ Novidades chegaram — frete grátis em compras acima de R$ 199</div>
+  <header class="header">
+    <a class="logo" href="#"><span class="logo-mark">V</span><span>VÉRTICE<small>LOJA ONLINE</small></span></a>
+    <form class="search" id="searchForm"><span>⌕</span><input id="searchInput" placeholder="O que você está procurando?" aria-label="Buscar produtos"><button>Buscar</button></form>
+    <button class="cart-open" id="openCart" aria-label="Abrir carrinho">♧ <span class="cart-label">Carrinho</span><b id="cartCount">0</b></button>
+  </header>
+  <nav class="nav" aria-label="Categorias">
+    <button class="nav-link active" data-category="Todos">Todos os produtos</button>
+    <button class="nav-link" data-category="Tecnologia">Tecnologia</button>
+    <button class="nav-link" data-category="Casa">Casa & decoração</button>
+    <button class="nav-link" data-category="Acessórios">Acessórios</button>
+    <button class="nav-link" data-category="Lifestyle">Lifestyle</button>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">ESCOLHAS QUE INSPIRAM</span>
+        <h1>Seu próximo<br>favorito está <em>aqui.</em></h1>
+        <p>Produtos selecionados para deixar sua rotina mais prática, bonita e cheia de personalidade.</p>
+        <a class="button dark-button" href="#produtos">Explorar produtos <span>↗</span></a>
+        <div class="social-proof"><div class="avatars"><i>J</i><i>M</i><i>A</i></div><span><b>+2.400 clientes</b><small>já compraram com a gente</small></span><strong class="stars">★★★★★</strong></div>
+      </div>
+      <div class="hero-photo"><img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1100&q=85" alt="Tênis moderno em destaque"><div class="floating-note"><span>✦</span><div><b>Design + qualidade</b><small>Detalhes que fazem diferença</small></div></div></div>
+      <div class="hero-orb"></div>
+    </section>
+
+    <section class="benefits">
+      <div><span>↗</span><p><b>Entrega para todo o Brasil</b><small>Receba onde estiver</small></p></div>
+      <div><span>◇</span><p><b>Seleção de qualidade</b><small>Escolhas feitas com cuidado</small></p></div>
+      <div><span>♡</span><p><b>Atendimento próximo</b><small>Estamos aqui para ajudar</small></p></div>
+      <div><span>↺</span><p><b>Compra sem complicação</b><small>Experiência simples e clara</small></p></div>
+    </section>
+
+    <section class="products-section" id="produtos">
+      <div class="section-head">
+        <div><span class="eyebrow">A VITRINE</span><h2>Descubra seus favoritos<span>.</span></h2><p>Uma seleção especial para você.</p></div>
+        <div class="sort-area"><span id="resultCount">8 produtos</span><label>Ordenar <select id="sortSelect"><option value="featured">Destaques</option><option value="price-asc">Menor preço</option><option value="price-desc">Maior preço</option><option value="name">Nome A–Z</option></select></label></div>
+      </div>
+      <div class="chips">
+        <button class="chip active" data-category="Todos">Tudo</button><button class="chip" data-category="Tecnologia">Tecnologia</button><button class="chip" data-category="Casa">Casa & decoração</button><button class="chip" data-category="Acessórios">Acessórios</button><button class="chip" data-category="Lifestyle">Lifestyle</button>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty hidden" id="emptyState"><span>⌕</span><h3>Nenhum produto encontrado</h3><p>Tente outro termo ou escolha outra categoria.</p><button class="button dark-button" id="clearFilters">Limpar filtros</button></div>
+    </section>
+
+    <section class="promo">
+      <div class="promo-watermark">V.</div><div><span class="eyebrow">UM PRESENTE PARA VOCÊ</span><h2>Pequenos detalhes.<br>Grandes descobertas.</h2><p>Explore a coleção e encontre algo que combine com você.</p></div><a href="#produtos" class="button lime-button">Ver coleção <span>↗</span></a>
+    </section>
+
+    <section class="newsletter">
+      <div><span class="eyebrow">FIQUE POR DENTRO</span><h2>Novidades boas chegam por e-mail.</h2><p>Cadastre-se para receber lançamentos e ofertas especiais.</p></div>
+      <form id="newsletterForm"><input id="emailInput" type="email" placeholder="Seu melhor e-mail" required aria-label="Seu e-mail"><button>Quero receber →</button></form>
+      <p id="newsletterMessage" class="newsletter-message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="footer-top"><a class="logo" href="#"><span class="logo-mark">V</span><span>VÉRTICE<small>LOJA ONLINE</small></span></a><p>Boas escolhas deixam a vida melhor.</p><div class="social-links"><a href="#contato">ig</a><a href="#contato">tk</a><a href="#contato">wa</a></div></div><div class="footer-bottom" id="contato"><span>© <span id="year"></span> Vértice Loja Online. Projeto demonstrativo.</span><span>Privacidade · Trocas e devoluções · Atendimento</span><span>Feito com cuidado ♥</span></div></footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrinho de compras" aria-hidden="true">
+    <div class="drawer-head"><div><span class="eyebrow">SUA SACOLA</span><h2>Meu carrinho <small id="drawerCount">(0)</small></h2></div><button class="close" id="closeCart" aria-label="Fechar carrinho">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div id="cartEmpty" class="cart-empty"><span>🛍</span><h3>Seu carrinho está vazio</h3><p>Que tal encontrar algo especial?</p><button class="button dark-button" id="continueShopping">Explorar produtos ↗</button></div>
+    <div class="cart-summary hidden" id="cartSummary"><div class="shipping-msg" id="shippingMessage"></div><div class="progress"><span id="shippingProgress"></span></div><div class="summary-line"><span>Subtotal</span><b id="cartSubtotal">R$ 0,00</b></div><div class="summary-line"><span>Frete</span><b id="shippingValue">Calculado no checkout</b></div><div class="summary-total"><span>Total parcial</span><b id="cartTotal">R$ 0,00</b></div><p class="fine-print">O frete e os dados de entrega são confirmados no próximo passo.</p><button class="checkout-button" id="checkoutButton">Finalizar pedido <span>→</span></button><button class="continue-link" id="keepShopping">Continuar comprando</button></div>
+  </aside>
+
+  <div class="modal hidden" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="modal-card"><button class="close modal-x" id="closeCheckout" aria-label="Fechar">×</button><span class="eyebrow">SÓ MAIS UM PASSO</span><h2 id="checkoutTitle">Finalizar pedido</h2><p class="modal-intro">Preencha seus dados para preparar o resumo do pedido.</p>
+      <form id="checkoutForm" class="checkout-form">
+        <label>Nome completo<input name="name" required minlength="3" placeholder="Como podemos te chamar?"></label>
+        <label>WhatsApp<input name="phone" type="tel" required placeholder="(00) 00000-0000"></label>
+        <label>CEP<input name="cep" required minlength="8" maxlength="9" placeholder="00000-000"></label>
+        <label>Endereço para entrega<textarea name="address" rows="2" required placeholder="Rua, número, bairro e cidade"></textarea></label>
+        <div class="checkout-total"><span>Total dos produtos</span><b id="checkoutTotal">R$ 0,00</b></div>
+        <button class="checkout-button">Gerar resumo do pedido →</button>
+        <p class="fine-print">Demonstração: este site não processa pagamentos nem envia pedidos automaticamente.</p>
+      </form>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

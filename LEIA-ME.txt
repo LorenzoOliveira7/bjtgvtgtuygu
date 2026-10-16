@@ -1,0 +1,18 @@
+VÉRTICE — LOJA VIRTUAL DEMONSTRATIVA
+
+COMO USAR
+1. Extraia o ZIP.
+2. Abra a pasta no Visual Studio Code.
+3. Abra index.html no navegador (ou use a extensão Live Server).
+
+RECURSOS
+- Layout responsivo.
+- Catálogo com produtos de exemplo e fotos.
+- Busca, filtros por categoria e ordenação.
+- Carrinho com quantidades, remoção e subtotal.
+- Carrinho salvo no navegador via localStorage.
+- Favoritos demonstrativos.
+- Checkout demonstrativo que gera um arquivo TXT com resumo do pedido.
+
+IMPORTANTE
+Esta é uma loja front-end de demonstração. Não possui backend, banco de dados, login real, estoque sincronizado, cálculo real de frete nem pagamento online. Os produtos e preços são fictícios. As imagens e fontes são carregadas pela internet. Para vender de verdade, será necessário conectar backend, entregas e um provedor de pagamentos.
